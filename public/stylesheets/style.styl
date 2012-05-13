@@ -1,0 +1,193 @@
+body
+  margin 0px
+  padding 0px
+  overflow hidden
+  -webkit-user-select none
+  -khtml-user-select none
+  -moz-user-select none
+  -o-user-select none
+  user-select none
+  background-image url(../images/paper.jpg)
+
+.toolbutton 
+    margin 5px
+    background-color #777
+    -webkit-border-radius 3px
+    -moz-border-radius 3px
+    -o-border-radius 3px
+    border-radius 3px
+
+.button 
+    height 16px
+    width 16px
+    padding 2px
+    -webkit-border-radius 3px
+    -moz-border-radius 3px
+    -o-border-radius 3px
+    border-radius 3px
+    background-repeat no-repeat
+    background-position 2px 2px
+    border 1px solid transparent
+    display inline-block
+    -webkit-user-select none
+    -khtml-user-select none
+    -moz-user-select none
+    -o-user-select none
+    user-select none
+
+.canvasbuttoncontainer 
+    position absolute
+    display -webkit-box
+    display -moz-box
+    display box
+    background white
+    padding 1px
+    -webkit-border-radius 3px
+    -moz-border-radius 3px
+    -o-border-radius 3px
+    border-radius 3px
+
+
+.button.active 
+    background-color #FFF
+    border 1px solid gray
+
+
+.button.hover 
+    background-color #FFF
+    border 1px solid gray
+
+
+.bottom 
+    position fixed
+    left 0px
+    right 0px
+    bottom 0px
+    text-align center
+
+#simplemodal-container
+    background-color #333
+    border 8px solid #444
+    padding 12px
+
+.bottom .bar 
+    height 32px
+    display inline-block
+    -webkit-border-radius 5px
+    -moz-border-radius 5px
+    -o-border-radius 5px
+    border-radius 5px
+    border 1px solid rgb(125, 125, 125)
+    background-image linear-gradient(bottom, rgb(31,31,31) 0%, rgb(56,56,56) 29%, rgb(38,38,38) 89%)
+    background-image -o-linear-gradient(bottom, rgb(31,31,31) 0%, rgb(56,56,56) 29%, rgb(38,38,38) 89%)
+    background-image -moz-linear-gradient(bottom, rgb(31,31,31) 0%, rgb(56,56,56) 29%, rgb(38,38,38) 89%)
+    background-image -webkit-linear-gradient(bottom, rgb(31,31,31) 0%, rgb(56,56,56) 29%, rgb(38,38,38) 89%)
+    background-image -ms-linear-gradient(bottom, rgb(31,31,31) 0%, rgb(56,56,56) 29%, rgb(38,38,38) 89%)
+    background-image -webkit-gradient linear left bottom left top color-stop(0, rgb(31,31,31)) color-stop(0.29, rgb(56,56,56)) color-stop(0.89, rgb(38,38,38))
+
+.right
+  position fixed
+  right 0
+  bottom 0
+  z-index 999
+
+.left
+  position fixed
+  left 0
+  bottom 0
+  z-index 999
+
+#chat, #nickname, #messages, #eqn
+  width 300px
+
+#chat, #eqn
+  position relative
+  border 1px solid #ccc
+
+#nickname, #connecting
+  position absolute
+  height 410px
+  z-index 100
+  left 0
+  top 0
+  background #fff
+  text-align center
+  width 300px
+  font 15px Georgia
+  color #666
+  display block
+  .wrap
+    padding-top 150px
+
+#nickname
+  input
+    border 1px solid #ccc
+    padding 10px
+    &:focus
+      border-color #999
+      outline 0
+  #nickname-err
+    color darkred
+    font-size 12px
+    visibility hidden
+
+.connected
+  #connecting
+    display none
+
+.nickname-set
+  #nickname
+    display none
+
+#messages, #equations
+  height 380px
+  background #eee
+  em
+    text-shadow 0 1px 0 #fff
+    color #999
+  p
+    padding 0
+    margin 0
+    font 12px Helvetica, Arial
+    padding 5px 10px
+    b
+      display inline-block
+      padding-right 10px
+  p:nth-child(even)
+    background #fafafa
+  #nicknames
+    background #ccc
+    padding 2px 4px 4px
+    font 11px Helvetica
+    span
+      color black
+    b
+      display inline-block
+      color #fff
+      background #999
+      padding 3px 6px
+      margin-right 5px
+      border-radius 10px
+      text-shadow 0 1px 0 #666
+  #lines
+    height 355px
+    overflow auto
+    overflow-x hidden
+    overflow-y auto
+
+#send-message, #add-equation
+  background #fff
+  position relative
+  input
+    border none
+    height 30px
+    padding 0 10px
+    line-height 30px
+    vertical-align middle
+    width 240px
+    &:focus
+      outline 0
+  button
+    position absolute
+    top 5px
+    right 5px

@@ -1,0 +1,221 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  background-image: url("../images/paper.jpg");
+}
+.toolbutton {
+  margin: 5px;
+  background-color: #777;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+.button {
+  height: 16px;
+  width: 16px;
+  padding: 2px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background-repeat: no-repeat;
+  background-position: 2px 2px;
+  border: 1px solid transparent;
+  display: inline-block;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.canvasbuttoncontainer {
+  position: absolute;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  background: #fff;
+  padding: 1px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+.button.active {
+  background-color: #fff;
+  border: 1px solid #808080;
+}
+.button.hover {
+  background-color: #fff;
+  border: 1px solid #808080;
+}
+.bottom {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  text-align: center;
+}
+#simplemodal-container {
+  background-color: #333;
+  border: 8px solid #444;
+  padding: 12px;
+}
+.bottom .bar {
+  height: 32px;
+  display: inline-block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #7d7d7d;
+  background-image: linear-gradient(bottom, #1f1f1f 0%, #383838 29%, #262626 89%);
+  background-image: -o-linear-gradient(bottom, #1f1f1f 0%, #383838 29%, #262626 89%);
+  background-image: -moz-linear-gradient(bottom, #1f1f1f 0%, #383838 29%, #262626 89%);
+  background-image: -webkit-linear-gradient(bottom, #1f1f1f 0%, #383838 29%, #262626 89%);
+  background-image: -ms-linear-gradient(bottom, #1f1f1f 0%, #383838 29%, #262626 89%);
+  background-image: -webkit-gradient linear left bottom left top color-stop(0, #1f1f1f) color-stop(0.29, #383838) color-stop(0.89, #262626);
+}
+.right {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+.left {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+}
+#chat,
+#nickname,
+#messages,
+#eqn {
+  width: 300px;
+}
+#chat,
+#eqn {
+  position: relative;
+  border: 1px solid #ccc;
+}
+#nickname,
+#connecting {
+  position: absolute;
+  height: 410px;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background: #fff;
+  text-align: center;
+  width: 300px;
+  font: 15px Georgia;
+  color: #666;
+  display: block;
+}
+#nickname .wrap,
+#connecting .wrap {
+  padding-top: 150px;
+}
+#nickname input {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+#nickname input:focus {
+  border-color: #999;
+  outline: 0;
+}
+#nickname #nickname-err {
+  color: #8b0000;
+  font-size: 12px;
+  visibility: hidden;
+}
+.connected #connecting {
+  display: none;
+}
+.nickname-set #nickname {
+  display: none;
+}
+#messages,
+#equations {
+  height: 380px;
+  background: #eee;
+}
+#messages em,
+#equations em {
+  text-shadow: 0 1px 0 #fff;
+  color: #999;
+}
+#messages p,
+#equations p {
+  padding: 0;
+  margin: 0;
+  font: 12px Helvetica, Arial;
+  padding: 5px 10px;
+}
+#messages p b,
+#equations p b {
+  display: inline-block;
+  padding-right: 10px;
+}
+#messages p:nth-child(even),
+#equations p:nth-child(even) {
+  background: #fafafa;
+}
+#messages #nicknames,
+#equations #nicknames {
+  background: #ccc;
+  padding: 2px 4px 4px;
+  font: 11px Helvetica;
+}
+#messages #nicknames span,
+#equations #nicknames span {
+  color: #000;
+}
+#messages #nicknames b,
+#equations #nicknames b {
+  display: inline-block;
+  color: #fff;
+  background: #999;
+  padding: 3px 6px;
+  margin-right: 5px;
+  border-radius: 10px;
+  text-shadow: 0 1px 0 #666;
+}
+#messages #lines,
+#equations #lines {
+  height: 355px;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#send-message,
+#add-equation {
+  background: #fff;
+  position: relative;
+}
+#send-message input,
+#add-equation input {
+  border: none;
+  height: 30px;
+  padding: 0 10px;
+  line-height: 30px;
+  vertical-align: middle;
+  width: 240px;
+}
+#send-message input:focus,
+#add-equation input:focus {
+  outline: 0;
+}
+#send-message button,
+#add-equation button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
